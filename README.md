@@ -26,5 +26,5 @@ stan2tfp provides the function `download_stan2tfp_compiler` which downloads a pr
 
 ## "Hello world"
 
-For a simple end-to-end example of using stan2tfp, see [here](https://github.com/adamhaber/stan2tfp/blob/master/examples/eight_schools_example.ipynb).
+For a simple end-to-end example of using stan2tfp, see [here](https://github.com/adamhaber/stan2tfp/blob/master/examples/eight%20schools%20example.ipynb).
 
