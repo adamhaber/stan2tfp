@@ -186,7 +186,7 @@ class Stan2tfp:
                 )
             ],
             kernel=kernel,
-            trace_fn=trace_fn
+            trace_fn=(lambda current_state, kernel_results: kernel_results)
         )
 
         return mcmc_trace, pkr
