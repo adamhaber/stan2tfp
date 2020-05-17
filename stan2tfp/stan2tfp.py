@@ -81,9 +81,7 @@ class Stan2tfp:
             self.compiler_path = _get_compiler_path()
         else:
             self.compiler_path = compiler_path
-        print(self.compiler_path)
         if not self.compiler_path.exists():
-            print("stan2tfp compiler not found, downloading...")
             download_stan2tfp_compiler(
                 str(self.compiler_path), version=compiler_version
             )
@@ -129,7 +127,7 @@ class Stan2tfp:
         self.parameter_shapes = self.model.parameter_shapes(1)
 
     @tf.function(experimental_compile=True)
-    def sample(self, nchain=4, num_main_iters=1000, num_warmup_iters=1000):
+    def sample(self, nchain=4, num_main_iters=1000, num_warmup_iters=1000, trace_fn=None):
         """Draw samples from the model using NUTS.
 
         Parameters
@@ -188,6 +186,7 @@ class Stan2tfp:
                 )
             ],
             kernel=kernel,
+            trace_fn=trace_fn
         )
 
         return mcmc_trace, pkr
