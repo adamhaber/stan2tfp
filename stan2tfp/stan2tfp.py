@@ -21,6 +21,16 @@ def _get_compiler_path():
 
 
 def download_stan2tfp_compiler(compiler_path=None, version="nightly"):
+    """A helper function which downloads the stan2tfp compiler.
+
+    Parameters
+    ----------
+    compiler_path : String, optional
+        The path to which the compiler should be downloaded.
+        By default equals the path of the stan2tfp package. 
+    version : String, optional
+        The exact version to download, by default "nightly"
+    """    
     if compiler_path is None:
         compiler_path = str(_get_compiler_path())
     plat = sys.platform
@@ -53,16 +63,19 @@ class Stan2tfp:
         stan_file_path : string, optional, by default None
             Model code must found via one of the following parameters: `stan_file_path` or `stan_model_code`.
             The string passed as an argument is expected to be a filename containing the Stan model specification.
-
         stan_model_code : string, optional
             A string containing the Stan model specification.
-
         data_dict : dict, optional
             A Python dictionary providing the data for the model. Variables for Stan are stored in the
             dictionary as expected. Variable names are the keys and the values are their associated values.
-
             Data for the model can be provided later using the `init_model` function,
             but must be provided before sampling.
+        compiler_path : String, optional
+            The path to which the compiler should be downloaded.
+            By default equals the path of the stan2tfp package. 
+
+        version : String, optional
+            The exact version to download, by default "nightly"
 
         Raises
         ------
