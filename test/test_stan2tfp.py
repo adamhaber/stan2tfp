@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from stan2tfp.stan2tfp import Stan2tfp, download_stan2tfp_compiler
+from stan2tfp import Stan2tfp, download_stan2tfp_compiler
 import pkg_resources
 
 
