@@ -12,7 +12,7 @@ stan2tfp is a lightweight interface wrapper around this functionality, allowing 
 
 ... without leaving the notebook or their favorite IDE.
 
-The new compiler and the TFP backend are under active development. Currently only a small subset of Stan's functionality is supported. For a list of supported distributions, see [here](https://github.com/adamhaber/stan2tfp/distributions.md).
+The new compiler and the TFP backend are under active development. Currently only a small subset of Stan's functionality is supported. For a list of supported distributions, see [here](https://github.com/adamhaber/stan2tfp/blob/master/distributions.md).
 
 ## Install
 
@@ -26,5 +26,5 @@ stan2tfp provides the function `download_stan2tfp_compiler` which downloads a pr
 
 ## "Hello world"
 
-For a simple end-to-end example of using stan2tfp, see [here](https://github.com/adamhaber/stan2tfp/examples/eight_schools_example.ipynb).
+For a simple end-to-end example of using stan2tfp, see [here](https://github.com/adamhaber/stan2tfp/blob/master/examples/eight_schools_example.ipynb).
 

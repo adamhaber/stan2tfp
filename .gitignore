@@ -2,3 +2,4 @@
 stan2tfp.egg-info/*
 *.pyc
 *.exe
+examples/.ipynb_checkpoints/*
