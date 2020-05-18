@@ -103,7 +103,7 @@ class Stan2tfp:
         if stan_file_path is None:
             if stan_model_code is None:
                 raise ValueError(
-                    "Either stan_model_code or stan_file_path must be provided to create a Model object"
+                    "Either stan_model_code or stan_file_path must be provided to create a Stan2tfp object"
                 )
             else:
                 self.stan_model_code = stan_model_code
@@ -248,7 +248,7 @@ class Stan2tfp:
         return tfp_code
 
     def _tfp_from_stan_model_code(self, stan_model_code):
-        fd, path = tempfile.mkstemp(prefix="name", suffix="asda")
+        fd, path = tempfile.mkstemp(prefix="temp_", suffix="")
         with open(fd, "w") as f:
             f.write(stan_model_code)
         self.stan_file_path = path
