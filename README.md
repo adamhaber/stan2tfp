@@ -18,7 +18,9 @@ The new compiler and the TFP backend are under active development. Currently onl
 
 stan2tfp is a pure-Python package which can be installed from PyPI
 
-> `pip install stan2tfp`
+```
+pip install stan2tfp
+```
 
 This will also install TensorFlow and TensorFlow Probability (both in nightly version; needed for XLA compilation of the model). 
 
