@@ -38,7 +38,7 @@ def download_stan2tfp_compiler(compiler_path=None, version="nightly"):
     if plat not in plat_rename.keys():
         raise OSError("OS {} is not supported".format(plat))
     plat = plat_rename[plat]
-    url = "https://github.com/stan-dev/stanc3/releases/download/{}/{}-stan2tfp".format(
+    url = "https://github.com/stan-dev/stan2tfp/releases/download/{}/{}-stan2tfp".format(
         version, plat
     )
     print("Downloading the latest stan2tfp compiler...")
